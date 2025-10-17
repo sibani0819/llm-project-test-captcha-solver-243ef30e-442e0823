@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Efficient CAPTCHA solving service with fast response times.">
+    <title>CAPTCHA Solver Service | Fast & Reliable Bot Protection Solutions</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CAPTCHA Solver Service">
+    <meta property="og:description" content="Professional CAPTCHA solving with fast turnaround times.">
+    <meta property="og:image" content="/images/sample.png">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="/css/style.css" as="style">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="h-100">
+    <div class="container h-100">
+        <main class="main-content">
+            <h1 class="title">CAPTCHA Solving Service</h1>
+            <section aria-labelledby="solver-section">
+                <div class="solver-container">
+                    <div id="captcha-container">
+                        <img id="captcha-image" src="/images/sample.png" 
+                             alt="CAPTCHA challenge image" 
+                             class="captcha-image"
+                             aria-describedby="captcha-instructions">
+                        <p id="captcha-instructions" class="sr-only">
+                            CAPTCHA image containing distorted text that needs to be entered
+                        </p>
+                    </div>
+                    <form id="solver-form" class="solver-form">
+                        <label for="captcha-url" class="form-label">Enter CAPTCHA Image URL:</label>
+                        <input type="url" 
+                               id="captcha-url" 
+                               name="url" 
+                               placeholder="https://example.com/captcha.png"
+                               class="form-input"
+                               aria-required="false">
+                        <button type="submit" class="btn-solve">Solve CAPTCHA</button>
+                    </form>
+                    
+                    <div id="result-container" class="result-container" aria-live="polite">
+                        <div class="loader" id="loader" hidden></div>
+                        <div id="solution" class="solution-text"></div>
+                        <div id="error" class="error-message" role="alert"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="/js/script.js" defer></script>
+</body>
+</html>
